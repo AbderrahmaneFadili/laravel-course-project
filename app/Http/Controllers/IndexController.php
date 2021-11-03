@@ -10,7 +10,18 @@ class IndexController extends Controller
     public function index()
     {
         //return the view welcome
-        return view('welcome');
+        $data = [
+            'name' =>
+            'Fadili Abderrahmane',
+            'users' => [
+                'jhon',
+                'messi',
+                'ronaldo',
+                'abderrahamne'
+            ],
+            'countries' => []
+        ];
+        return view('index', $data);
     }
 
     public function __invoke()
